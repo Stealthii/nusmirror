@@ -1,0 +1,12 @@
+version: '2'
+services:
+    nusmirror:
+        image: stealthii/nusmirror
+        build: nusmirror
+        volumes:
+            - nus-data:/srv/ccs
+        ports:
+            - 0.0.0.0:80:80
+volumes:
+    nus-data:
+        driver: local
